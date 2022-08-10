@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DB_QuanLyNhanVien">
+  <DataContextMoniker Name="/DB_QuanLyNhanVienDataContext" />
+  <nestedChildShapes>
+    <classShape Id="1a06f8cc-209b-4eaf-8960-2bfdab3c37b9" absoluteBounds="0.75, 5.25, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DB_QuanLyNhanVienDataContext/tAccount" />
+      <nestedChildShapes>
+        <elementListCompartment Id="63b19f2b-5eac-417b-bdf5-65fee7093184" absoluteBounds="0.765, 5.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6f8a3fdd-e792-4db5-b88d-524fe076beb0" absoluteBounds="3.5, 1, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/DB_QuanLyNhanVienDataContext/tStaff" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3f7be718-cbae-406b-8d08-afc5d5f33f24" absoluteBounds="3.515, 1.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="64900a5b-3061-48c1-9c4e-f9f55e175733" absoluteBounds="0.75, 1.375, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/DB_QuanLyNhanVienDataContext/tRoom" />
+      <nestedChildShapes>
+        <elementListCompartment Id="85a8c419-7857-46af-8076-48ca536d830e" absoluteBounds="0.765, 1.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 6.13544840494792); (4.5 : 6.13544840494792); (4.5 : 3.34780110677083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DB_QuanLyNhanVienDataContext/tAccount/tAccount_tStaff" />
+      <nodes>
+        <classShapeMoniker Id="1a06f8cc-209b-4eaf-8960-2bfdab3c37b9" />
+        <classShapeMoniker Id="6f8a3fdd-e792-4db5-b88d-524fe076beb0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.06814697265625); (3.5 : 2.06814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DB_QuanLyNhanVienDataContext/tRoom/tRoom_tStaff" />
+      <nodes>
+        <classShapeMoniker Id="64900a5b-3061-48c1-9c4e-f9f55e175733" />
+        <classShapeMoniker Id="6f8a3fdd-e792-4db5-b88d-524fe076beb0" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

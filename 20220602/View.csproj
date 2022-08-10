@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1D92EBAD-3B1E-498E-BA50-4E5467BF712D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>View</RootNamespace>
+    <AssemblyName>View</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.3.2, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.2\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FRM_Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Account.Designer.cs">
+      <DependentUpon>FRM_Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_ChangePassword.Designer.cs">
+      <DependentUpon>FRM_ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Empty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Empty.Designer.cs">
+      <DependentUpon>FRM_Empty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_ForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_ForgetPassword.Designer.cs">
+      <DependentUpon>FRM_ForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Index.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Index.Designer.cs">
+      <DependentUpon>FRM_Index.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_LoadingScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_LoadingScreen.Designer.cs">
+      <DependentUpon>FRM_LoadingScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Login.Designer.cs">
+      <DependentUpon>FRM_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Room.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Room.Designer.cs">
+      <DependentUpon>FRM_Room.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_SetAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_SetAccount.Designer.cs">
+      <DependentUpon>FRM_SetAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_Staff.Designer.cs">
+      <DependentUpon>FRM_Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FRM_Account.resx">
+      <DependentUpon>FRM_Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_ChangePassword.resx">
+      <DependentUpon>FRM_ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Empty.resx">
+      <DependentUpon>FRM_Empty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_ForgetPassword.resx">
+      <DependentUpon>FRM_ForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Index.resx">
+      <DependentUpon>FRM_Index.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_LoadingScreen.resx">
+      <DependentUpon>FRM_LoadingScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Login.resx">
+      <DependentUpon>FRM_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Room.resx">
+      <DependentUpon>FRM_Room.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_SetAccount.resx">
+      <DependentUpon>FRM_SetAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Staff.resx">
+      <DependentUpon>FRM_Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightning.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forget.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\like.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\google.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Data\Controller.csproj">
+      <Project>{51af630e-7a70-4e38-89e2-0cf3db4d8a68}</Project>
+      <Name>Controller</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

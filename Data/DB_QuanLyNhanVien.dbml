@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DB_QuanLyNhanVien" Class="DB_QuanLyNhanVienDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=CVPKhoiVM1-2;Initial Catalog=DB_QuanLyNhanVien;Integrated Security=True;Pooling=False" SettingsObjectName="Data.Properties.Settings" SettingsPropertyName="DB_QuanLyNhanVienConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tAccount" Member="tAccounts">
+    <Type Name="tAccount">
+      <Column Name="Id_Account" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Account_Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="tAccount_tStaff" Member="tStaffs" ThisKey="Id_Account" OtherKey="Id_Account" Type="tStaff" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tStaff" Member="tStaffs">
+    <Type Name="tStaff">
+      <Column Name="Id_Staff" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Staff_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Id_Account" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Id_Room" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Staff_Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="tAccount_tStaff" Member="tAccount" ThisKey="Id_Account" OtherKey="Id_Account" Type="tAccount" IsForeignKey="true" />
+      <Association Name="tRoom_tStaff" Member="tRoom" ThisKey="Id_Room" OtherKey="Id_Room" Type="tRoom" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tRoom" Member="tRooms">
+    <Type Name="tRoom">
+      <Column Name="Id_Room" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Room_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Room_Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="tRoom_tStaff" Member="tStaffs" ThisKey="Id_Room" OtherKey="Id_Room" Type="tStaff" />
+    </Type>
+  </Table>
+</Database>
